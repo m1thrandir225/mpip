@@ -19,11 +19,19 @@ plugins {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 
+
     buildTypes {
+        debug {
+            buildConfigField("String", "MOVIE_API_KEY", "7fde4c9b")
+            buildConfigField("String", "MOVIE_API_BASE_URL", "https://www.omdbapi.com")
+        }
         release {
             isMinifyEnabled = false
+            buildConfigField("String", "MOVIE_API_KEY", "7fde4c9b")
+            buildConfigField("String", "MOVIE_API_BASE_URL", "https://www.omdbapi.com")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -61,10 +69,11 @@ dependencies {
 
     //Room
     implementation("androidx.room:room-runtime:$room_version")
-
-
     annotationProcessor("androidx.room:room-compiler:$room_version")
-
     ksp("androidx.room:room-compiler:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
+
+    //Picasso
+    implementation ("com.squareup.picasso:picasso:2.8")
+
 }

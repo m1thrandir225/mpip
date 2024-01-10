@@ -7,18 +7,18 @@ import androidx.fragment.app.activityViewModels
 import com.sebastijanzindl.labs3.R
 import com.sebastijanzindl.labs3.databinding.FirstFragmentBinding
 import com.sebastijanzindl.labs3.viewmodels.MovieDetailsViewModel
-import com.sebastijanzindl.labs3.viewmodels.MoviesViewModel
-import com.sebastijanzindl.labs3.viewmodels.MoviesViewModelFactory
+import com.sebastijanzindl.labs3.viewmodels.FirstFragmentViewModel
+import com.sebastijanzindl.labs3.viewmodels.FirstFragmentViewModelFactory
 
 class FirstFragment: Fragment(R.layout.first_fragment) {
     private var _binding: FirstFragmentBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var moviesViewModel: MoviesViewModel
+    private lateinit var firstFragmentViewModel: FirstFragmentViewModel
 
     private val movieDetailsViewModel: MovieDetailsViewModel by activityViewModels {
 
-        MoviesViewModelFactory(
+        FirstFragmentViewModelFactory(
             requireContext()
         )
 
