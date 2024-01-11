@@ -56,7 +56,7 @@ class ApiProvider {
             val gsonConverterFactory = GsonConverterFactory.create(gson)
 
             val retrofit = Retrofit.Builder()
-                .baseUrl(BuildConfig.MOVIE_API_BASE_URL)
+                .baseUrl("https://www.omdbapi.com/")
                 .client(okhttpClient)
                 .addConverterFactory(gsonConverterFactory)
                 .build()

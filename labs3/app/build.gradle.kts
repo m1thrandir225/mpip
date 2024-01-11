@@ -4,11 +4,15 @@ plugins {
     id("com.google.devtools.ksp")
 }
 
-    android {
+val openmoviedb_api = "7fde4c9b";
+
+android {
     namespace = "com.sebastijanzindl.labs3"
     compileSdk = 34
 
-    defaultConfig {        applicationId = "com.sebastijanzindl.labs3"
+
+    defaultConfig {
+        applicationId = "com.sebastijanzindl.labs3"
         minSdk = 30
         targetSdk = 34
         versionCode = 1
@@ -25,13 +29,11 @@ plugins {
 
     buildTypes {
         debug {
-            buildConfigField("String", "MOVIE_API_KEY", "7fde4c9b")
-            buildConfigField("String", "MOVIE_API_BASE_URL", "https://www.omdbapi.com")
+            buildConfigField("String", "MOVIE_API_KEY", "\"$openmoviedb_api\"")
         }
         release {
             isMinifyEnabled = false
-            buildConfigField("String", "MOVIE_API_KEY", "7fde4c9b")
-            buildConfigField("String", "MOVIE_API_BASE_URL", "https://www.omdbapi.com")
+            buildConfigField("String", "MOVIE_API_KEY", "\"$openmoviedb_api\"")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

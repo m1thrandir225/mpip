@@ -8,11 +8,9 @@ class MovieRepository(private val remoteSource: RemoteMovieDataSource, private v
             localSource.add(this)
         }
     }
-
     suspend fun new(movie: Movie) {
         return localSource.add(movie = movie);
     }
-
     suspend fun allMovies(): List<Movie> {
         return localSource.getAll();
     }

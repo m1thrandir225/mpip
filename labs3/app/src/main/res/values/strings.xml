@@ -3,4 +3,14 @@
     <string name="movie_poster">movie_poster</string>
     <string name="movie_name">Movie Name</string>
     <string name="movie_release_year">Movie Release Year</string>
+    <string name="search">Search</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="runtime">Runtime</string>
+    <string name="director">Director</string>
+    <string name="movie_language">Language</string>
+    <string name="genre">Genre</string>
+    <string name="movie_country">Country</string>
+    <string name="movie_id">ID</string>
+    <string name="movie_actors">Actors</string>
+    <string name="movie_plot">Movie Plot</string>
 </resources>
